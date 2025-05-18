@@ -1,0 +1,51 @@
+## I'm starting to develop a new project, there requirements are as this md file below:
+
+;don't do anything oke, just remember the information to provide me good response when I ask future questions.
+when showing me response, only show code snippets and changes that is new, not regenerate everything for every files.
+
+#region Questions to clarify
+
+Is this the minimal version of clean architecture yet easily scalable?
+I also want to store and get log so that I'm able to trace error and exception when the app is running
+What is the best way to design paging solution, so that in the back-end I have a dynamic base paging api endpoint that can handle paging for every entity (of course except some exceptional cases),give me flow from front-end to back-end.
+the api endpoint has to be flexible in terms of fields data, master-detail data can be fetched or not based on mode param from front-end (fe),
+easily sort data based on multiple field names, search data using  operation with multiple fields combined with search data using OR operation with multiple fields
+
+#endregion
+
+Login with Google diagram: https://www.npmjs.com/package/vue-google-oauth2
+
+** Checklist vấn đề **
+font-size theo rem
+dùng đúng icon
+
+key của file .env phải có tiền tố VITE_, nếu ko value sẽ null
+build fail do tên file trên git là User.ts nhưng trong project lại import user.ts (ở windows ko lỗi, nhưng linux sẽ lỗi, vì linux case-sensitive)
+
+backend prod:
+http://production.eba-nbh3jtv6.ap-southeast-1.elasticbeanstalk.com/api
+
+frontend prod:
+https://main.d3vt4ohfxm0zrb.amplifyapp.com
+
+Base list (for user side - not grid with multiple fields):
+filterin & sortin: pagerequest
+api
+entity
+andle scrollin
+need user logged in or not
+slot for list item
+click on item, show detail page
+
+Base detail:
+id
+entity
+
+database:
+every table has fields:
+id,
+`created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_by` int DEFAULT NULL,
+  `modified_by` int DEFAULT NULL,
+  `is_active` bit(1) DEFAULT b'1' COMMENT 'bản ghi này có đang được sử dụng ko. nếu ko đc sử dụng thì ko lấy lên giao diện',
